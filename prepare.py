@@ -45,7 +45,7 @@ def normaliseNominalData(NOM,dataset):
         dataset[col]=dataset[col].apply(normalise)
     return dataset
 
-def columnToNumeric(dataset):
+def columnsToNumeric(dataset):
     for col in dataset:
         dataset[col]=pandas.to_numeric(dataset[col])
     return dataset
@@ -55,5 +55,5 @@ def prepare(dataset):
     NOM=createNominals(dataset)
     NUM=createNumericals(dataset)
     normaliseNominalData(NOM,dataset)
-    columnToNumeric(dataset)
+    columnsToNumeric(dataset)
     return dataset
