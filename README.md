@@ -4,6 +4,7 @@ Implement practical data analysis work by using a Support Vector Machine to clas
 
 ## TODO
 #### loader.py
+loadDataset - Loads dataset from .csv
 #### prepare.py
 #### saver.py
 #### classifier.py
