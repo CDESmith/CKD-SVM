@@ -1,7 +1,7 @@
 from sklearn import svm
 
 def createClf():
-    clf=svm.SVC()
+    clf=svm.SVC(C=1.0,kernel='linear')
     return clf
 
 def trainClassifier(clf,X_train,y_train):

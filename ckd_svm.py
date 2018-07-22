@@ -23,12 +23,27 @@ def previousDataset():
     dataset=l.loadSavedDataset(OUTPUT_DIRECTORY)
     l.loadTrainingAndTestingSets(OUTPUT_DIRECTORY)
     X_train,X_test,Y_train,Y_test,y=l.loadTrainingAndTestingSets(OUTPUT_DIRECTORY)
-    clf=l.loadClassifier(OUTPUT_DIRECTORY)
+    clf=c.createClf()
+    print clf
+    s.saveClassifier(clf)
     c.trainClassifier(clf,X_train,Y_train)
     m.printScoring(clf,X_test,y,Y_test)
-    
-### First run newDataset()
-### Score
-### Alter classifier
-### Second run previousDataset()
-### Score
+
+### 1
+### newDataset()
+### 46 of 80
+### Classifier: clf=svm.SVC()    
+### 2
+### previousDataset()
+### 46 of 80
+### Classifier: SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
+### decision_function_shape='ovr', degree=3, gamma='auto', kernel='rbf',
+### max_iter=-1, probability=False, random_state=None, shrinking=True,
+### tol=0.001, verbose=False)
+### 3
+### previousDataset()
+### 79 of 80
+### SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
+### decision_function_shape='ovr', degree=3, gamma='auto', kernel='linear',
+### max_iter=-1, probability=False, random_state=None, shrinking=True,
+### tol=0.001, verbose=False)
