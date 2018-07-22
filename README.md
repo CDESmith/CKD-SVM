@@ -2,10 +2,14 @@
 
 Implement practical data analysis work by using a Support Vector Machine to classify instances as either chronic kidney disease and non-chronic kidney disease.
 
-## TODO
-## DONE
+# Scores
+1. 48/80 - Run number 1 - svm.SVC()
+
 #### loader.py
 * loadDataset - Loads dataset from .csv
+* loadSavedDataset - Loads previous dataset
+* loadTrainingAndTestingSets - Loads test and traing sets from previous run
+* loadClassifier - Loads saved classifier
 #### prepare.py
 * missingValuesToNan - Changes all '?' values to numpy.nan
 * createNominals - Creates a list of all nominal fields
