@@ -50,10 +50,22 @@ def columnsToNumeric(dataset):
         dataset[col]=pandas.to_numeric(dataset[col])
     return dataset
 
+def nanNominalToMean(NOM,dataset):
+    for col in NOM:
+        dataset[col]=dataset[col].fillna(dataset[col].mean())
+    return dataset
+
+def nanNumericalToMean(NUM,dataset):
+    for col in NUM:
+        dataset[col]=dataset[col].fillna(dataset[col].mean())
+    return dataset
+
 def prepare(dataset):
     missingValuesToNan(dataset)
     NOM=createNominals(dataset)
     NUM=createNumericals(dataset)
     normaliseNominalData(NOM,dataset)
     columnsToNumeric(dataset)
+    nanNominalToMean(NOM,dataset)
+    nanNumericalToMean(NUM,dataset)
     return dataset
