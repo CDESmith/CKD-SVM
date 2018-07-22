@@ -10,3 +10,6 @@ def checkNomNormalisation(dataset):
 def checkFieldTypes(dataset):
     for col in dataset:
         print dataset[col].dtype
+
+def checkSetSize(dataset,X_train):
+    return X_train.shape

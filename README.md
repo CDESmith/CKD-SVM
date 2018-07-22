@@ -14,6 +14,7 @@ Implement practical data analysis work by using a Support Vector Machine to clas
 * nanNominalToMean - Changes nominal nan's to column mean
 * nanNumericalToMean - Changes numerical nan's to column mean
 * limitFloatingPrecision - changes types from float to int
+* splitSets - creates training and testing sets
 * prepare - runs all preparation functions
 #### check.py
 * datasetShape - Checks dataset shape, as expected (400,25) but got (400,26)

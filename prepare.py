@@ -1,5 +1,6 @@
 import numpy
 import pandas
+from sklearn.model_selection import train_test_split
 
 def missingValuesToNan(dataset):
     for col in dataset:
@@ -66,6 +67,11 @@ def limitFloatingPrecision(dataset):
         dataset[col]=dataset[col].astype(int)
         i+=1
     return dataset
+
+def splitSets(dataset):
+    y = dataset['class']
+    X_train,X_test,y_train,y_test=train_test_split(dataset,y,test_size=0.2)
+    return (X_train,X_test,y_train,y_test,y)
 
 def prepare(dataset):
     missingValuesToNan(dataset)
