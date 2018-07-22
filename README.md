@@ -21,8 +21,14 @@ Implement practical data analysis work by using a Support Vector Machine to clas
 * datasetNans - Checks all fields that contain NaN values
 * checkNomNormalisation - Displays first five rows of dataset, to check no text values remain
 * checkFieldTypes - To ensure changing nan values to column means runs smoothly
+* checkSetSize - check training set size (expect 320,24)
 #### saver.py
+* saveDataset - Saves (clean) dataset for future use
+* saveSets - Saves training and testing sets for checking future improvements
+* saveClassifier - Saves classifier to recheck performance
 #### classifier.py
+* createClf - creates blank classifier for initial run
+* trainClassifier - applies training sets to train classifier
 #### messages.py
-
+* printScoring - Prints score
 ## DONE
