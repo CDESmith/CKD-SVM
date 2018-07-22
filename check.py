@@ -6,3 +6,7 @@ def datasetNans(dataset):
 
 def checkNomNormalisation(dataset):
     return dataset.head()
+
+def checkFieldTypes(dataset):
+    for col in dataset:
+        print dataset[col].dtype

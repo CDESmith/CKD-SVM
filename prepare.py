@@ -1,4 +1,5 @@
 import numpy
+import pandas
 
 def missingValuesToNan(dataset):
     for col in dataset:
@@ -44,9 +45,15 @@ def normaliseNominalData(NOM,dataset):
         dataset[col]=dataset[col].apply(normalise)
     return dataset
 
+def columnToNumeric(dataset):
+    for col in dataset:
+        dataset[col]=pandas.to_numeric(dataset[col])
+    return dataset
+
 def prepare(dataset):
     missingValuesToNan(dataset)
     NOM=createNominals(dataset)
     NUM=createNumericals(dataset)
     normaliseNominalData(NOM,dataset)
+    columnToNumeric(dataset)
     return dataset
