@@ -1,10 +1,11 @@
 import loader as l
 import check as ch
 import prepare as p
+import saver as s
 
 DATASET_FILE='ckd_data.csv'
+OUTPUT_DIRECTORY='./OUTPUT/'
 
 dataset=l.loadDataset(DATASET_FILE)
-
-p.prepare(dataset)
-print ch.checkFieldTypes(dataset)
+dataset=p.prepare(dataset)
+s.saveDataset(dataset)
