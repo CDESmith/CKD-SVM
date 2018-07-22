@@ -3,6 +3,7 @@
 Implement practical data analysis work by using a Support Vector Machine to classify instances as either chronic kidney disease and non-chronic kidney disease.
 
 ## TODO
+## DONE
 #### loader.py
 * loadDataset - Loads dataset from .csv
 #### prepare.py
@@ -31,4 +32,3 @@ Implement practical data analysis work by using a Support Vector Machine to clas
 * trainClassifier - applies training sets to train classifier
 #### messages.py
 * printScoring - Prints score
-## DONE
