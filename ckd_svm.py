@@ -7,3 +7,4 @@ DATASET_FILE='ckd_data.csv'
 dataset=l.loadDataset(DATASET_FILE)
 
 p.prepare(dataset)
+print ch.checkFieldTypes(dataset)

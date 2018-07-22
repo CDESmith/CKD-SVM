@@ -4,20 +4,22 @@ Implement practical data analysis work by using a Support Vector Machine to clas
 
 ## TODO
 #### loader.py
-loadDataset - Loads dataset from .csv
+* loadDataset - Loads dataset from .csv
 #### prepare.py
-missingValuesToNan - Changes all '?' values to numpy.nan
-createNominals - Creates a list of all nominal fields
-createNumericals - Creates a list of all numerical fields
-normaliseNominalData - Changes nominal texr values to numerical equivalent
-columnsToNumeric - Changes all fields to numeric type
-nanNominalToMean - Changes nominal nan's to column mean
-nanNumericalToMean - Changes numerical nan's to column mean
+* missingValuesToNan - Changes all '?' values to numpy.nan
+* createNominals - Creates a list of all nominal fields
+* createNumericals - Creates a list of all numerical fields
+* normaliseNominalData - Changes nominal texr values to numerical equivalent
+* columnsToNumeric - Changes all fields to numeric type
+* nanNominalToMean - Changes nominal nan's to column mean
+* nanNumericalToMean - Changes numerical nan's to column mean
+* limitFloatingPrecision - changes types from float to int
+* prepare - runs all preparation functions
 #### check.py
-datasetShape - Checks dataset shape, as expected (400,25) but got (400,26)
-datasetNans - Checks all fields that contain NaN values
-checkNomNormalisation - Displays first five rows of dataset, to check no text values remain
-checkFieldTypes - To ensure changing nan values to column means runs smoothly
+* datasetShape - Checks dataset shape, as expected (400,25) but got (400,26)
+* datasetNans - Checks all fields that contain NaN values
+* checkNomNormalisation - Displays first five rows of dataset, to check no text values remain
+* checkFieldTypes - To ensure changing nan values to column means runs smoothly
 #### saver.py
 #### classifier.py
 #### messages.py

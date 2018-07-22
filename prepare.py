@@ -60,6 +60,13 @@ def nanNumericalToMean(NUM,dataset):
         dataset[col]=dataset[col].fillna(dataset[col].mean())
     return dataset
 
+def limitFloatingPrecision(dataset):
+    i=0
+    for col in dataset:
+        dataset[col]=dataset[col].astype(int)
+        i+=1
+    return dataset
+
 def prepare(dataset):
     missingValuesToNan(dataset)
     NOM=createNominals(dataset)
@@ -68,4 +75,5 @@ def prepare(dataset):
     columnsToNumeric(dataset)
     nanNominalToMean(NOM,dataset)
     nanNumericalToMean(NUM,dataset)
+    limitFloatingPrecision(dataset)
     return dataset
