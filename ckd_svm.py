@@ -18,7 +18,8 @@ def newDataset():
     s.saveClassifier(clf)
     c.trainClassifier(clf,X_train,y_train)
     m.printScoring(clf,X_test,y,y_test)
-    
+    m.printPercentage(clf,X_test,y,y_test)
+
 def previousDataset():
     dataset=l.loadSavedDataset(OUTPUT_DIRECTORY)
     l.loadTrainingAndTestingSets(OUTPUT_DIRECTORY)
@@ -28,11 +29,14 @@ def previousDataset():
     s.saveClassifier(clf)
     c.trainClassifier(clf,X_train,Y_train)
     m.printScoring(clf,X_test,y,Y_test)
+    m.printPercentage(clf,X_test,y,y_test)
+    
+newDataset()
 
 ### 1
 ### newDataset()
 ### 46 of 80
-### Classifier: clf=svm.SVC()    
+### Classifier: clf=svm.SVC()
 ### 2
 ### previousDataset()
 ### 46 of 80
